@@ -34,7 +34,30 @@ signupForm.addEventListener('submit', async (e) => {
         console.log("Documento escrito con el ID: ", docRef.id);
     }catch(error){
         console.log(error);
+        if(error.code === 'auth/email-already-in-use'){
+            console.log("Correo ya registrado");
+            alertaError("El correo proporcionado ya se encuentra registardo.");
+        } else if(error.code === 'auth/invalid-email'){
+            console.log("Correo no válido");
+            alertaError("El correo proporcionado no es válido.");
+        } else if(error.code === "auth/weak-password"){
+            console.log("Password débil");
+            alertaError("La contraseña es muy débil. Deber ser mayor a 6 caracteres y contener mayúsculas, minúsculas y números.");
+        } else if (error.code){
+            console.log(error);
+            alertaError("Algo salió mal. Intente más tarde.");
+        }
     }
     
-})
+});
+
+//Función que permite enviar una alerta de error al usuario.
+function alertaError(mensaje) {
+    document.getElementById('alertMessage').innerHTML = mensaje;
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+    })
+    toastList.forEach(toast => toast.show());
+}
 

@@ -31,15 +31,28 @@ loginForm.addEventListener('submit', async (e) => {
         });
     }catch(error){
         console.log(error);
-        if(error.code === "auth/wrong-password"){
+        if(error.code === 'auth/wrong-password'){
             console.log("Contraseña incorrecta");
+            alertaError("Contraseña incorrecta.");
         } else if(error.code === "auth/user-not-found"){
             console.log("Usuario no encontrado");
+            alertaError("Usuario no encontrado.");
         } else{
             console.log(error);
+            alertaError("Algo salió mal. Intente más tarde.");
         }
     }
 });
+
+//Función que permite enviar una alerta de error al usuario.
+function alertaError(mensaje) {
+    document.getElementById('alertMessage').innerHTML = mensaje;
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+    })
+    toastList.forEach(toast => toast.show());
+}
 
 // Exportamos la variable user
 export {user};

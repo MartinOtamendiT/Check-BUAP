@@ -78,7 +78,7 @@ body{
         color: #002D4C;
     }
 
-.card-signin{
+.card-signup{
     background-color: #ffffff;
     max-width: 600px;
     padding: 20px 60px;
@@ -86,7 +86,7 @@ body{
     border-radius: 2px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
-    .card-signin img{
+    .card-signup img{
         width: 200px;
         align-self: center;
     }
