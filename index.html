@@ -9,14 +9,13 @@
     <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
     <link rel="manifest" href="./js/manifest.json">
     <script src="./lib/js/bootstrap.min.js"></script>
-    <script src="./js/index.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="card card-login">
             <img alt="Check BUAP logo" id="check-buap-img" align="center" src="./img/checkbuap_logo.jpeg"/>
             <img alt="perfil lobo" id="perfil-img" class="profile-img-card" src="./img/wolf_tail.gif"/>
-            <form class="form-login mt-4 mb-2">
+            <form class="form-login mt-4 mb-2" id="login-form">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
                 <br>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
@@ -25,9 +24,10 @@
             </form>
             <p align="center">
                 ¿Nuevo usuario?
-                <a href="./html/signin.html" class="forgot-password">Registrate aquí</a>
+                <a href="./html/signup.html" class="forgot-password">Registrate aquí</a>
             </p>
         </div>
     </div>
+    <script src="./js/index.js" type="module"></script>
 </body>
 </html>
