@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../lib/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card card-signin">
+            <img alt="Check BUAP logo" id="check-buap-img" align="center" src="../img/checkbuap_logo.jpeg"/>
+            <form class="form-login mt-3 mb-2">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" class="form-control" placeholder="Nombre" required autofocus>
+                
+                <label for="matricula" class="form-label">Matrícula:</label>
+                <input type="number" id="matricula" class="form-control" placeholder="Matricula" required>
+                
+                <label for="correo" class="form-label">Correo electrónico:</label>
+                <input type="email" id="correo" class="form-control" placeholder="Usuario" required>
+                
+                <label for="contraseña" class="form-label">Contraseña:</label>
+                <input type="password" id="contraseña" class="form-control" placeholder="Contraseña" required>
+                
+                <label for="contraseña-confirm" class="form-label">Confirmar contraseña:</label>
+                <input type="password" id="contraseña-confirm" class="form-control" placeholder="Contraseña" required>
+                <br>
+                <button class="btn btn-lg btn-primary btn-block btn-login" type="submit">Registrarme</button>
+            </form>    
+        </div>
+    </div>
+</body>
+</html>

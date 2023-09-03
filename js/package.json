@@ -1,0 +1,17 @@
+{
+  "name": "check-buap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "FireBase.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode": "^1.5.3"
+  }
+}
