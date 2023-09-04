@@ -78,15 +78,17 @@ body{
         color: #002D4C;
     }
 
-.card-signup{
-    background-color: #ffffff;
-    max-width: 600px;
-    padding: 20px 60px;
-    margin: 25px auto;
-    border-radius: 2px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+.navbar-custom {
+    background-color: #002D4C;
 }
-    .card-signup img{
-        width: 200px;
-        align-self: center;
+    .navbar-custom .nav-link {
+        color: white;
+        font-size: 18px;
+        margin: 0px 5px;
+        padding: 5px 20px;
+        text-align: center;
+    }
+    .navbar-custom .nav-link:hover{
+        color: white;
+        background-color: #00B4E1;
     }

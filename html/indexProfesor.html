@@ -10,45 +10,31 @@
     <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="d-flex">
-            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="./indexProfesor.html">
-              <img src="../img/checkbuap_logo.jpeg" height="30" alt="Check BUAP logo" loading="lazy" style="margin-top: 2px"/>
-            </a>
-            <ul class="navbar-nav flex-row d-none d-md-flex">
-                <li class="nav-item me-3 me-lg-1 active">
-                  <a class="nav-link" href="#">
-                    Clase
-                  </a>
-                </li>
-                <li class="nav-item me-3 me-lg-1 active">
-                    <a class="nav-link" href="#">
-                      Reporte
-                    </a>
-                </li>
-            </ul>
-            <div class="d-flex align-items-center">
-                <a class="btn btn-danger me-3" href="../index.html">Salir</a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container d-flex">
+            <a class="navbar-brand" href="./indexProfesor.html">Check BUAP</a>
+            <!--a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="./indexProfesor.html">
+                <img src="../img/checkbuap_logo.jpeg" height="30" alt="Check BUAP logo" loading="lazy" style="margin-top: 2px"/>
+            </a-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#">Clase</a>
+                    <a class="nav-link" href="#">Reporte</a>
+                    <a class="nav-link" href="../index.html">Salir</a>
+                </div>
             </div>
         </div>
     </nav>
     <div class="container">
         <div class="card card-login">
-            <img alt="Check BUAP logo" id="check-buap-img" align="center" src="../img/checkbuap_logo.jpeg"/>
-            <img alt="perfil lobo" id="perfil-img" class="profile-img-card" src="../img/wolf_tail.gif"/>
-            <form class="form-login mt-4 mb-2">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
-                <br>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-                <br>
-                <button class="btn btn-lg btn-primary btn-block btn-login" type="submit">Ingresar</button>
-            </form>
-            <p align="center">
-                ¿Nuevo usuario?
-                <a href="./signin.html" class="forgot-password">Registrate aquí</a>
-            </p>
+            <a class="btn btn-lg btn-primary btn-block btn-login" href="./leerQR.html">Escanear QR</a>
         </div>
     </div>
     <script src="../lib/js/bootstrap.min.js"></script>
+    <script src="../js/profesor.js"></script>
 </body>
 </html>

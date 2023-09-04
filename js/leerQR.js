@@ -24,11 +24,7 @@ scanner.start();
 // for debugging
 window.scanner = scanner;
 
-
-document.getElementById('start-button').addEventListener('click', () => {
-    scanner.start();
-});
-
 document.getElementById('stop-button').addEventListener('click', () => {
     scanner.stop();
+    window.location.href = "../html/indexProfesor.html";
 });
