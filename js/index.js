@@ -1,14 +1,20 @@
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
 import './firebase.js'
 import './loginForm.js'
+//import './alumno.js'
 
+//Se llama al service Worker.
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./serviceWorker.js')
       .then(reg => console.log('Service Worker registrado', reg))
       .catch(err => console.warn('Error al registrar Service Worker', err))
 }
 
-/*login.addEventListener('click', (e)=>{
-    var email = document.getElementById('inputEmail').value;
-    var password = document.getElementById('inputPassword').value;
-    console.log(email+password);
-})*/
+//Lista los cambios en la autenticación
+/*onAuthStateChanged(auth, async (user) => {
+    if (user) {
+        console.log("Existe")
+    } else {
+        console.log("NO Existe")
+    }
+});*/

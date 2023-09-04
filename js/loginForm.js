@@ -1,9 +1,8 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+import { signInWithEmailAndPassword, onAuthStateChanged, setPersistence, browserLocalPersistence} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js";
 import { auth, db } from './firebase.js'
 
 const loginForm = document.querySelector('#login-form');
-let user = {};
 
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -11,16 +10,22 @@ loginForm.addEventListener('submit', async (e) => {
     const email = loginForm['inputEmail'].value;
     const password = loginForm['inputPassword'].value;
 
-    //Guardo datos adicionales.
+    //Se realiza el login del usuario
     try{
         //Obtengo al usuario desde los datos de autenticación.
-        const credentials = await signInWithEmailAndPassword(auth, email, password);
+        await signInWithEmailAndPassword(auth, email, password);       
+        //const usuario = auth.currentUser;
+        //console.log(usuario);
 
         //Busco al usuario en la base de datos adicionales con base en su correo.
         const querySnapshot = await getDocs(collection(db, "usuarios"));
         querySnapshot.forEach((doc) => {
-            user = doc.data();
+            const user = doc.data();
             if(user.Correo === email){
+                //Guarda datos del usuario.
+                localStorage.setItem("userNombre", user.Nombre);
+                localStorage.setItem("userMatricula", user.Matricula);
+                localStorage.setItem("userCorreo", user.Correo);
                 //Pregunto si el usuario es alumno o profesor para su redirección.
                 if(user.Rol === 'Profesor'){
                     window.location.href = "../html/indexProfesor.html";
@@ -54,5 +59,3 @@ function alertaError(mensaje) {
     toastList.forEach(toast => toast.show());
 }
 
-// Exportamos la variable user
-export {user};

@@ -32,6 +32,7 @@ signupForm.addEventListener('submit', async (e) => {
             Correo: email
         });
         console.log("Documento escrito con el ID: ", docRef.id);
+        window.location.href = "../index.html";
     }catch(error){
         console.log(error);
         if(error.code === 'auth/email-already-in-use'){
