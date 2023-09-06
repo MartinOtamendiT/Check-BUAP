@@ -7,7 +7,7 @@ const matricula = localStorage.getItem("userMatricula");
 const correo = localStorage.getItem("userCorreo");
 
 //Genera QR con la matrícula y el nombre.
-new QRCode(document.getElementById("qrcode"), `{"matricula":"${matricula}", "nombre":"${nombre}"}`);
+new QRCode(document.getElementById("qrcode"), `{"matricula":"${matricula}"}`);
 //Coloca nombre en la tarjeta.
 var cardNombre = document.getElementById('nombreAlumno');
 cardNombre.innerText = nombre;

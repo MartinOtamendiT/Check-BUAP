@@ -3,8 +3,8 @@ try{
     const alumnoDatos = JSON.parse(localStorage.getItem("alumno"));
 
     //Coloca nombre en la tarjeta.
-    var cardNombre = document.getElementById('nombreAlumno');
-    cardNombre.innerText = alumnoDatos.nombre;
+    /*var cardNombre = document.getElementById('nombreAlumno');
+    cardNombre.innerText = alumnoDatos.nombre;*/
     //Coloca matrícula en la tarjeta.
     var cardMat = document.getElementById('matAlumno');
     cardMat.innerText = alumnoDatos.matricula;
