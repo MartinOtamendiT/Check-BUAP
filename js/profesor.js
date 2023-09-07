@@ -1,6 +1,7 @@
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js";
 import { auth, db } from './firebase.js'
 
+localStorage.setItem("back", "./indexProfesor.html");
 //Obtiene datos de las clases y el profesor.
 const profesorMat = localStorage.getItem("userMatricula");
 const querySnapshot = await getDocs(collection(db, "clases"));

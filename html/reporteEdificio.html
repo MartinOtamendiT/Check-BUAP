@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <link href="../css/stylesAdmin.css" rel="stylesheet">
+    <link href="../img/checkbuap_icon.png" rel="icon">
+    <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container d-flex">
+            <a class="navbar-brand" href="./indexProfesor.html">Check BUAP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="./indexDasu.html">Edificios</a>
+                    <a class="nav-link" href="./reportesListaDasu.html">Reportes</a>
+                    <a class="nav-link" href="../index.html">Salir</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card card-data postsRep">   
+                    <h3 id="nombreEdificio"></h3>
+                    <h4 id="dependenciaEdificio"></h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm table-responsive">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Salón</th>
+                                <th scope="col">En clase</th>
+                                <th scope="col">Presentes</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tableComparativa">
+                            <th scope="row">301</th>
+                            <td>21</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                        <tbody class="tableComparativa">
+                            <th scope="row">302</th>
+                            <td>19</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                        <tbody class="tableComparativa">
+                            <th scope="row">303</th>
+                            <td>32</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                        <tbody class="tableComparativa">
+                            <th scope="row">309</th>
+                            <td>16</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                        <tbody class="tableComparativa">
+                            <th scope="row">310</th>
+                            <td>0</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                        <tbody class="tableComparativa">
+                            <th scope="row">208</th>
+                            <td>37</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                        <tbody class="tableComparativa">
+                            <th scope="row">104</th>
+                            <td>0</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                        <tbody class="tableComparativa">
+                            <th scope="row">109</th>
+                            <td>32</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>    
+                        <tbody class="tableComparativa">
+                            <th scope="row">114</th>
+                            <td>30</td>
+                            <td class="alumnosPresentes"></td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/js/bootstrap.min.js"></script>
+    <script src="../js/reporteEdificio.js" type="module"></script>
+</body>
+</html>

@@ -26,5 +26,5 @@ window.scanner = scanner;
 
 document.getElementById('stop-button').addEventListener('click', () => {
     scanner.stop();
-    window.location.href = "../html/indexProfesor.html";
+    window.location.href = `${localStorage.getItem("back")}`;
 });

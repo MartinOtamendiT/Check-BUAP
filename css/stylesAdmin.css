@@ -8,28 +8,18 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: linear-gradient(#002D4C, #00B4E1);
+    background-image: #d2d2d2;
 }
 
-.card-login{
+.card{
     background-color: #F7F7F7;
     max-width: 370px;
     padding: 40px 40px;
     margin: 25px auto;
     border-radius: 2px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    align-items: center;
 }
-    #check-buap-img {
-        border: none;
-        background: none;
-        padding: 0;
-    }
-    #check-buap-img img {
-        max-width: 100%; /* La imagen se ajustará al ancho del botón */
-        height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
-        display: block; /* Para eliminar cualquier espacio adicional debajo de la imagen */
-    }
-    
     .profile-img-card{
         width: 100px;
         height: 100px;
@@ -65,10 +55,9 @@ body{
     
     .btn.btn-login {
         background-color: #002D4C;
-        padding: 0px;
+        padding: 10px;
         font-weight: 700;
         font-size: 16px;
-        height: 38px;
         border-radius: 10px;
         border: none;
         transition: all 0.218s;
@@ -88,19 +77,45 @@ body{
         color: #002D4C;
     }
 
-.card-signup{
-    background-color: #ffffff;
-    max-width: 600px;
-    padding: 20px 60px;
-    margin: 25px auto;
-    border-radius: 2px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+.navbar-custom {
+    background-color: #002D4C;
 }
-    .card-signup img{
-        width: 200px;
-        align-self: center;
+    .navbar-custom .nav-link {
+        color: white;
+        font-size: 18px;
+        margin: 0px 5px;
+        padding: 5px 20px;
+        text-align: center;
+    }
+    .navbar-custom .nav-link:hover{
+        color: white;
+        background-color: #00B4E1;
     }
 
-.hide{
-    display:none
+.posts h5, h4{
+    color: #002D4C;
+    text-align: center;
+}
+.posts p{
+    margin: 0.5rem;
+    text-align: center;
+}
+.posts li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/************************Reportes**************************************/
+.postsRep h5, h4, h3{
+    color: #002D4C;
+    text-align: center;
+}
+.postsRep p{
+    margin: 0.5rem;
+    text-align: center;
+}
+.postsRep li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

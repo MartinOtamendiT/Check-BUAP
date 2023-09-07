@@ -26,11 +26,13 @@ loginForm.addEventListener('submit', async (e) => {
                 localStorage.setItem("userNombre", user.Nombre);
                 localStorage.setItem("userMatricula", user.Matricula);
                 localStorage.setItem("userCorreo", user.Correo);
-                //Pregunto si el usuario es alumno o profesor para su redirección.
+                //Pregunto si el usuario es alumno, profesor o admin para su redirección.
                 if(user.Rol === 'Profesor'){
                     window.location.href = "../html/indexProfesor.html";
-                }else{
+                }else if(user.Rol === 'Alumno'){
                     window.location.href = "../html/indexAlumno.html";
+                }else{
+                    window.location.href = "../html/indexDasu.html";
                 }
             }
         });
