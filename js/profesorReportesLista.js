@@ -4,7 +4,7 @@ import { auth, db } from './firebase.js'
 //Obtiene datos de las clases y el profesor.
 const profesorMat = localStorage.getItem("userMatricula");
 const querySnapshot = await getDocs(collection(db, "clases"));
-const postList = document.querySelector(".posts");
+const postList = document.querySelector(".postsRep");
 let html = "";
 //Busca las materias que imparte el profesor.
 querySnapshot.forEach((doc) => {
@@ -24,7 +24,8 @@ querySnapshot.forEach((doc) => {
             <h5>${clase.nombre} - Secc. ${clase.seccion}</h5>
             ${diasDetalles}
             <p id="nrc">NRC: ${clase.nrc}</p>
-            <a class="btn btn-lg btn-primary btn-block btn-login botonPase" href="./leerQR.html">Pasar lista</a>
+
+            <a class="btn btn-lg btn-primary btn-block btn-login botonVerRep" href="./reporte.html">Ver reporte</a>
         </li>`;
         //Concatena los elementos de la lista.
         html += li;
@@ -34,7 +35,7 @@ querySnapshot.forEach((doc) => {
 postList.innerHTML = html;
 
 //Lee el NRC de la clase seleccionada para el pase de lista.
-const botonesVerReporte = document.querySelectorAll('.botonPase');
+const botonesVerReporte = document.querySelectorAll('.botonVerRep');
 botonesVerReporte.forEach((boton) => {
     //A cada botón le añade un listener.
     boton.addEventListener('click', function (event) {
